@@ -1,0 +1,12 @@
+<ul ng-controller="NavCtrl">
+    <li><a href="/#!/employees/list">List Employees</a></li>
+    <li><a href="/#!/employees/create">Add Employee</a></li>
+    <li><span ng-include="'app/navigation/partials/search.html'"></span></li>
+
+    <li class="align-right">
+        <span ng-if="isAuthenticated()">
+            <button><a href="#" ng-click="logout()">Logout</a></button>
+        </span>
+        <span ng-if="!isAuthenticated()"></span>
+    </li>
+</ul>

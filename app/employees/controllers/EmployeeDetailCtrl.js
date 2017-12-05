@@ -10,11 +10,11 @@ angular
         // ng-click button Fire!
         $scope.fireEmployee = () => {
             EmployeeFactory.fire($scope.employee, $routeParams.employeeId).then(() =>
-            $location.url("/"));
+            $location.url("/employees/list"));
         }
         // ng-click button Murder!
         $scope.murderEmployee = () =>
         EmployeeFactory.murder($routeParams.employeeId).then(() =>
-            $location.url("/"));
+            $location.url("/employees/list"));
     }
 )
